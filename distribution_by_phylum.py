@@ -27,7 +27,8 @@ from pprint import pprint
 ASPARAGINASES = ['ReAV','ReAIV','EcAI','EcAII','EcAIII']
 
 
-#Extract phylums
+#EXTRACT PHYLUMS
+
 with open('data/metadata.json','r') as json_file:
     metadata = json.load(json_file)
 
@@ -40,10 +41,10 @@ for genome in metadata:
     origin_of_genomes[genome] = phylum
 
 
-#Count number of orthologs of each asp. for each phylum
-    #Create phylum_count dict
+#COUNT NUMBER OF ORTHOLOGS FOR EACH PHYLUM
+
 phylum_count = dict()
-        #Add each phylum as key, dict of count of 0 of every asp. as value
+phylum_count_strict = dict()
 for phylum in phylums:
     phylum_count[phylum] = {
         'ReAV':0,
@@ -52,8 +53,15 @@ for phylum in phylums:
         'EcAII':0,
         'EcAIII':0,
     }
+    phylum_count_strict[phylum] = {
+        'ReAV':0,
+        'ReAIV':0,
+        'EcAI':0,
+        'EcAII':0,
+        'EcAIII':0,
+    }
+    
 
-    #Load emboss-pfam-rbh.json to huge_dictionary
 with open('data/emboss-pfam-rbh.json','r') as json_file:
     orthologs_data = json.load(json_file)
 
@@ -61,7 +69,30 @@ for asparaginase in ASPARAGINASES:
     for genome in orthologs_data[asparaginase]:
         genomes_origin = origin_of_genomes[genome]
         phylum_count[genomes_origin][asparaginase] += len(orthologs_data[asparaginase][genome])
+        #strict counting
+        for ortholog in orthologs_data[asparaginase][genome]:
+            if orthologs_data[asparaginase][genome][ortholog]["pfam"] == 1 or orthologs_data[asparaginase][genome][ortholog]["query_coverage"] >= 50:
+                phylum_count_strict[genomes_origin][asparaginase]+=1
 
 
-with open('data/phylum_distribution.json', 'w') as f:
+#SAVE AND RETURN DATA
+with open('data/phylum_count.json', 'w') as f:
     json.dump(phylum_count, f, indent=4)
+with open('data/phylum_count_strict.json', 'w') as f:
+    json.dump(phylum_count_strict, f, indent=4)
+
+def print_table(count_dictionary):
+    print("\t\t\tReAV\tReAIV\tEcAI\tEcAII\tEcAIII")
+    for key in phylum_count:
+        print("{:<24}{:<8}{:<8}{:<8}{:<8}{:<8}".format(
+            key,
+            phylum_count[key]["ReAV"],
+            phylum_count[key]["ReAIV"],
+            phylum_count[key]["EcAI"],
+            phylum_count[key]["EcAII"],
+            phylum_count[key]["EcAIII"],
+        ))
+
+print_table(phylum_count)
+print("pfam==1 or query_coverage>=50")
+print_table(phylum_count_strict)
