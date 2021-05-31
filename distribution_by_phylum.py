@@ -83,14 +83,14 @@ with open('data/phylum_count_strict.json', 'w') as f:
 
 def print_table(count_dictionary):
     print("\t\t\tReAV\tReAIV\tEcAI\tEcAII\tEcAIII")
-    for key in phylum_count:
+    for key in count_dictionary:
         print("{:<24}{:<8}{:<8}{:<8}{:<8}{:<8}".format(
             key,
-            phylum_count[key]["ReAV"],
-            phylum_count[key]["ReAIV"],
-            phylum_count[key]["EcAI"],
-            phylum_count[key]["EcAII"],
-            phylum_count[key]["EcAIII"],
+            count_dictionary[key]["ReAV"],
+            count_dictionary[key]["ReAIV"],
+            count_dictionary[key]["EcAI"],
+            count_dictionary[key]["EcAII"],
+            count_dictionary[key]["EcAIII"],
         ))
 
 print_table(phylum_count)
