@@ -1,206 +1,10 @@
 {
-    "Aerophobota": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 3
-    },
-    "Spirochaetota": {
-        "ReAV": 2,
-        "ReAIV": 4,
-        "EcAI": 186,
-        "EcAII": 50,
-        "EcAIII": 24
-    },
-    "Eremiobacterota": {
-        "ReAV": 0,
-        "ReAIV": 42,
-        "EcAI": 4,
-        "EcAII": 14,
-        "EcAIII": 6
-    },
-    "Delongbacteria": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 1,
-        "EcAII": 6,
-        "EcAIII": 7
-    },
-    "Tectomicrobia": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 1,
-        "EcAII": 4,
-        "EcAIII": 1
-    },
-    "UBA10199": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 1,
-        "EcAII": 2,
-        "EcAIII": 0
-    },
-    "CSP1-3": {
-        "ReAV": 0,
-        "ReAIV": 3,
-        "EcAI": 1,
-        "EcAII": 3,
-        "EcAIII": 1
-    },
-    "UBA3054": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "Thermosulfidibacterota": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
     "Desantisbacteria": {
         "ReAV": 0,
         "ReAIV": 0,
         "EcAI": 0,
         "EcAII": 2,
         "EcAIII": 0
-    },
-    "T1SED10-198M": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "ARS69": {
-        "ReAV": 0,
-        "ReAIV": 1,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "Firmicutes_H": {
-        "ReAV": 3,
-        "ReAIV": 8,
-        "EcAI": 0,
-        "EcAII": 8,
-        "EcAIII": 0
-    },
-    "Thermodesulfobiota": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 2,
-        "EcAIII": 0
-    },
-    "UBP13": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "SZUA-79": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "Latescibacterota": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 27
-    },
-    "DSWW01": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "UBP14": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 2,
-        "EcAIII": 0
-    },
-    "WOR-3": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 4,
-        "EcAII": 11,
-        "EcAIII": 39
-    },
-    "Firmicutes_F": {
-        "ReAV": 0,
-        "ReAIV": 17,
-        "EcAI": 4,
-        "EcAII": 7,
-        "EcAIII": 0
-    },
-    "CG2-30-70-394": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "B130-G9": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "TA06": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 2
-    },
-    "Deferribacterota": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 1,
-        "EcAII": 1,
-        "EcAIII": 0
-    },
-    "Bdellovibrionota_C": {
-        "ReAV": 0,
-        "ReAIV": 1,
-        "EcAI": 4,
-        "EcAII": 0,
-        "EcAIII": 13
-    },
-    "Firmicutes": {
-        "ReAV": 386,
-        "ReAIV": 320,
-        "EcAI": 427,
-        "EcAII": 2276,
-        "EcAIII": 306
-    },
-    "GCA-001730085": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "Fibrobacterota": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 3,
-        "EcAII": 47,
-        "EcAIII": 1
     },
     "Firmicutes_G": {
         "ReAV": 4,
@@ -209,133 +13,56 @@
         "EcAII": 7,
         "EcAIII": 13
     },
-    "Riflebacteria": {
+    "Edwardsbacteria": {
         "ReAV": 0,
         "ReAIV": 0,
-        "EcAI": 10,
-        "EcAII": 5,
+        "EcAI": 3,
+        "EcAII": 6,
         "EcAIII": 0
     },
-    "Methylomirabilota": {
+    "GCA-001730085": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Desulfobacterota_E": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Planctomycetota": {
+        "ReAV": 10,
+        "ReAIV": 80,
+        "EcAI": 150,
+        "EcAII": 84,
+        "EcAIII": 538
+    },
+    "Caldatribacteriota": {
+        "ReAV": 1,
+        "ReAIV": 1,
+        "EcAI": 10,
+        "EcAII": 0,
+        "EcAIII": 11
+    },
+    "Gemmatimonadota_A": {
         "ReAV": 0,
         "ReAIV": 0,
         "EcAI": 1,
-        "EcAII": 14,
-        "EcAIII": 39
+        "EcAII": 0,
+        "EcAIII": 0
     },
-    "Desulfobacterota_G": {
+    "SpSt-1050": {
         "ReAV": 0,
         "ReAIV": 0,
         "EcAI": 0,
-        "EcAII": 5,
-        "EcAIII": 4
-    },
-    "Campylobacterota": {
-        "ReAV": 2,
-        "ReAIV": 1,
-        "EcAI": 83,
-        "EcAII": 379,
-        "EcAIII": 31
-    },
-    "Omnitrophota": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 5,
-        "EcAIII": 2
-    },
-    "Armatimonadota": {
-        "ReAV": 4,
-        "ReAIV": 17,
-        "EcAI": 3,
-        "EcAII": 4,
-        "EcAIII": 81
+        "EcAII": 1,
+        "EcAIII": 0
     },
     "UBP4": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "CG2-30-53-67": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "Cloacimonadota": {
-        "ReAV": 2,
-        "ReAIV": 0,
-        "EcAI": 5,
-        "EcAII": 47,
-        "EcAIII": 2
-    },
-    "Sumerlaeota": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 2
-    },
-    "Nitrospinota_B": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "Mcinerneyibacteriota": {
-        "ReAV": 0,
-        "ReAIV": 1,
-        "EcAI": 0,
-        "EcAII": 2,
-        "EcAIII": 0
-    },
-    "SAR324": {
-        "ReAV": 0,
-        "ReAIV": 7,
-        "EcAI": 2,
-        "EcAII": 9,
-        "EcAIII": 13
-    },
-    "Marinisomatota": {
-        "ReAV": 44,
-        "ReAIV": 33,
-        "EcAI": 36,
-        "EcAII": 56,
-        "EcAIII": 113
-    },
-    "NPL-UPA2": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "Myxococcota": {
-        "ReAV": 27,
-        "ReAIV": 61,
-        "EcAI": 194,
-        "EcAII": 53,
-        "EcAIII": 207
-    },
-    "Margulisbacteria": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 3,
-        "EcAIII": 0
-    },
-    "RBG-13-61-14": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "UBP15": {
         "ReAV": 0,
         "ReAIV": 0,
         "EcAI": 0,
@@ -349,203 +76,70 @@
         "EcAII": 205,
         "EcAIII": 753
     },
-    "DTU030": {
-        "ReAV": 1,
-        "ReAIV": 9,
+    "Firmicutes_H": {
+        "ReAV": 3,
+        "ReAIV": 8,
+        "EcAI": 0,
+        "EcAII": 8,
+        "EcAIII": 0
+    },
+    "WOR-3": {
+        "ReAV": 0,
+        "ReAIV": 0,
         "EcAI": 4,
-        "EcAII": 1,
-        "EcAIII": 0
+        "EcAII": 11,
+        "EcAIII": 39
     },
-    "Abyssubacteria": {
+    "Desulfobacterota_B": {
         "ReAV": 0,
         "ReAIV": 0,
         "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
+        "EcAII": 30,
+        "EcAIII": 28
     },
-    "Hydrogenedentota": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 1,
-        "EcAII": 0,
-        "EcAIII": 7
+    "Gemmatimonadota": {
+        "ReAV": 46,
+        "ReAIV": 114,
+        "EcAI": 41,
+        "EcAII": 106,
+        "EcAIII": 227
     },
-    "Actinobacteriota": {
-        "ReAV": 175,
-        "ReAIV": 4144,
-        "EcAI": 715,
-        "EcAII": 2458,
-        "EcAIII": 336
-    },
-    "UBP6": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 7,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "Lindowbacteria": {
+    "Omnitrophota": {
         "ReAV": 0,
         "ReAIV": 0,
         "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "Chlamydiota": {
-        "ReAV": 1,
-        "ReAIV": 0,
-        "EcAI": 1,
-        "EcAII": 6,
-        "EcAIII": 1
-    },
-    "Moduliflexota": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 2,
-        "EcAII": 2,
-        "EcAIII": 1
-    },
-    "Ratteibacteria": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "Bdellovibrionota": {
-        "ReAV": 18,
-        "ReAIV": 52,
-        "EcAI": 103,
-        "EcAII": 17,
-        "EcAIII": 33
-    },
-    "Calescibacterota": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "DUMJ01": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 4
-    },
-    "TA06_A": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 1
-    },
-    "BMS3Abin14": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "Nitrospirota": {
-        "ReAV": 0,
-        "ReAIV": 1,
-        "EcAI": 2,
-        "EcAII": 2,
-        "EcAIII": 101
-    },
-    "Desulfobacterota_C": {
-        "ReAV": 0,
-        "ReAIV": 4,
-        "EcAI": 2,
-        "EcAII": 2,
-        "EcAIII": 0
-    },
-    "FEN-1099": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 1
-    },
-    "JABMQX01": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "Chloroflexota": {
-        "ReAV": 87,
-        "ReAIV": 232,
-        "EcAI": 40,
-        "EcAII": 238,
-        "EcAIII": 287
-    },
-    "Caldatribacteriota": {
-        "ReAV": 1,
-        "ReAIV": 1,
-        "EcAI": 10,
-        "EcAII": 0,
-        "EcAIII": 11
-    },
-    "Desulfobacterota_F": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 7,
-        "EcAII": 23,
-        "EcAIII": 3
-    },
-    "Krumholzibacteriota": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 14,
-        "EcAII": 13,
-        "EcAIII": 18
-    },
-    "RBG-13-66-14": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 1,
+        "EcAII": 5,
         "EcAIII": 2
     },
-    "UBA2233": {
+    "SZUA-182": {
         "ReAV": 0,
         "ReAIV": 0,
         "EcAI": 0,
         "EcAII": 0,
         "EcAIII": 0
     },
-    "JACIXR01": {
+    "CSP1-3": {
         "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
+        "ReAIV": 3,
+        "EcAI": 1,
+        "EcAII": 3,
+        "EcAIII": 1
     },
-    "UBP17": {
+    "Zixibacteria": {
+        "ReAV": 10,
+        "ReAIV": 16,
+        "EcAI": 3,
+        "EcAII": 11,
+        "EcAIII": 9
+    },
+    "Aquificota": {
         "ReAV": 0,
         "ReAIV": 0,
-        "EcAI": 2,
+        "EcAI": 1,
         "EcAII": 0,
         "EcAIII": 1
     },
-    "Firmicutes_A": {
-        "ReAV": 105,
-        "ReAIV": 119,
-        "EcAI": 1900,
-        "EcAII": 505,
-        "EcAIII": 197
-    },
-    "DQWO01": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "Firestonebacteria": {
+    "UBA3054": {
         "ReAV": 0,
         "ReAIV": 0,
         "EcAI": 0,
@@ -559,33 +153,229 @@
         "EcAII": 0,
         "EcAIII": 0
     },
-    "OLB16": {
+    "Eremiobacterota": {
+        "ReAV": 0,
+        "ReAIV": 42,
+        "EcAI": 4,
+        "EcAII": 14,
+        "EcAIII": 6
+    },
+    "Schekmanbacteria": {
         "ReAV": 0,
         "ReAIV": 0,
         "EcAI": 0,
         "EcAII": 0,
-        "EcAIII": 2
+        "EcAIII": 0
     },
-    "UBP7": {
+    "Firmicutes_B": {
+        "ReAV": 17,
+        "ReAIV": 44,
+        "EcAI": 22,
+        "EcAII": 32,
+        "EcAIII": 19
+    },
+    "Spirochaetota": {
+        "ReAV": 2,
+        "ReAIV": 4,
+        "EcAI": 186,
+        "EcAII": 50,
+        "EcAIII": 24
+    },
+    "CG2-30-53-67": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Aerophobota": {
         "ReAV": 0,
         "ReAIV": 0,
         "EcAI": 0,
         "EcAII": 0,
         "EcAIII": 3
     },
-    "Nitrospinota": {
+    "NPL-UPA2": {
         "ReAV": 0,
         "ReAIV": 0,
         "EcAI": 0,
         "EcAII": 0,
-        "EcAIII": 13
+        "EcAIII": 0
     },
-    "Aquificota": {
+    "Actinobacteriota": {
+        "ReAV": 175,
+        "ReAIV": 4144,
+        "EcAI": 715,
+        "EcAII": 2458,
+        "EcAIII": 336
+    },
+    "Aureabacteria": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Ratteibacteria": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Tectomicrobia": {
         "ReAV": 0,
         "ReAIV": 0,
         "EcAI": 1,
+        "EcAII": 4,
+        "EcAIII": 1
+    },
+    "Krumholzibacteriota": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 14,
+        "EcAII": 13,
+        "EcAIII": 18
+    },
+    "RBG-13-61-14": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Riflebacteria": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 10,
+        "EcAII": 5,
+        "EcAIII": 0
+    },
+    "Desulfobacterota": {
+        "ReAV": 4,
+        "ReAIV": 17,
+        "EcAI": 68,
+        "EcAII": 215,
+        "EcAIII": 42
+    },
+    "FEN-1099": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
         "EcAII": 0,
         "EcAIII": 1
+    },
+    "SAR324": {
+        "ReAV": 0,
+        "ReAIV": 7,
+        "EcAI": 2,
+        "EcAII": 9,
+        "EcAIII": 13
+    },
+    "Cloacimonadota": {
+        "ReAV": 2,
+        "ReAIV": 0,
+        "EcAI": 5,
+        "EcAII": 47,
+        "EcAIII": 2
+    },
+    "AABM5-125-24": {
+        "ReAV": 0,
+        "ReAIV": 3,
+        "EcAI": 2,
+        "EcAII": 4,
+        "EcAIII": 2
+    },
+    "Aureabacteria_A": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Firmicutes_F": {
+        "ReAV": 0,
+        "ReAIV": 17,
+        "EcAI": 4,
+        "EcAII": 7,
+        "EcAIII": 0
+    },
+    "Fusobacteriota": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 56,
+        "EcAII": 0,
+        "EcAIII": 26
+    },
+    "Bipolaricaulota": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 2,
+        "EcAII": 5,
+        "EcAIII": 1
+    },
+    "Dependentiae": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "JACIXR01": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "SZUA-79": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Verrucomicrobiota": {
+        "ReAV": 1,
+        "ReAIV": 3,
+        "EcAI": 53,
+        "EcAII": 126,
+        "EcAIII": 256
+    },
+    "Desulfobacterota_D": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 1
+    },
+    "Moduliflexota": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 2,
+        "EcAII": 2,
+        "EcAIII": 1
+    },
+    "Eisenbacteria": {
+        "ReAV": 4,
+        "ReAIV": 11,
+        "EcAI": 4,
+        "EcAII": 4,
+        "EcAIII": 5
+    },
+    "UBP6": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 7,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Firmicutes_E": {
+        "ReAV": 8,
+        "ReAIV": 23,
+        "EcAI": 2,
+        "EcAII": 23,
+        "EcAIII": 9
     },
     "Dictyoglomota": {
         "ReAV": 0,
@@ -597,6 +387,419 @@
     "UBA6262": {
         "ReAV": 0,
         "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Nitrospirota_A": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 5
+    },
+    "FCPU426": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Deferribacterota": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 1,
+        "EcAII": 1,
+        "EcAIII": 0
+    },
+    "Mcinerneyibacteriota": {
+        "ReAV": 0,
+        "ReAIV": 1,
+        "EcAI": 0,
+        "EcAII": 2,
+        "EcAIII": 0
+    },
+    "T1SED10-198M": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Bacteroidota": {
+        "ReAV": 2,
+        "ReAIV": 44,
+        "EcAI": 4895,
+        "EcAII": 1154,
+        "EcAIII": 5682
+    },
+    "Nitrospinota_B": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "J088": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Cyanobacteria": {
+        "ReAV": 656,
+        "ReAIV": 521,
+        "EcAI": 14,
+        "EcAII": 63,
+        "EcAIII": 470
+    },
+    "UBA10199": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 1,
+        "EcAII": 2,
+        "EcAIII": 0
+    },
+    "Chrysiogenetota": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "UBA2233": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "DUMJ01": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 4
+    },
+    "B130-G9": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Firmicutes_A": {
+        "ReAV": 105,
+        "ReAIV": 119,
+        "EcAI": 1900,
+        "EcAII": 505,
+        "EcAIII": 197
+    },
+    "UBP7_A": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "BMS3Abin14": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "UBP7": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 3
+    },
+    "Delongbacteria": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 1,
+        "EcAII": 6,
+        "EcAIII": 7
+    },
+    "Nitrospinota_A": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 3,
+        "EcAIII": 0
+    },
+    "Synergistota": {
+        "ReAV": 0,
+        "ReAIV": 2,
+        "EcAI": 54,
+        "EcAII": 67,
+        "EcAIII": 1
+    },
+    "4572-55": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 2,
+        "EcAIII": 1
+    },
+    "Firestonebacteria": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Desulfobacterota_C": {
+        "ReAV": 0,
+        "ReAIV": 4,
+        "EcAI": 2,
+        "EcAII": 2,
+        "EcAIII": 0
+    },
+    "Chloroflexota": {
+        "ReAV": 87,
+        "ReAIV": 232,
+        "EcAI": 40,
+        "EcAII": 238,
+        "EcAIII": 287
+    },
+    "ARS69": {
+        "ReAV": 0,
+        "ReAIV": 1,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Deinococcota": {
+        "ReAV": 47,
+        "ReAIV": 31,
+        "EcAI": 17,
+        "EcAII": 72,
+        "EcAIII": 48
+    },
+    "Desulfobacterota_F": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 7,
+        "EcAII": 23,
+        "EcAIII": 3
+    },
+    "CG03": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 1,
+        "EcAII": 1,
+        "EcAIII": 0
+    },
+    "UBP18": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "RUG730": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Poribacteria": {
+        "ReAV": 2,
+        "ReAIV": 5,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 7
+    },
+    "Thermodesulfobiota": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 2,
+        "EcAIII": 0
+    },
+    "Desulfobacterota_G": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 5,
+        "EcAIII": 4
+    },
+    "Abyssubacteria": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "DSWW01": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Fibrobacterota": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 3,
+        "EcAII": 47,
+        "EcAIII": 1
+    },
+    "CSSED10-310": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 1,
+        "EcAIII": 0
+    },
+    "UBP15": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Nitrospirota": {
+        "ReAV": 0,
+        "ReAIV": 1,
+        "EcAI": 2,
+        "EcAII": 2,
+        "EcAIII": 101
+    },
+    "DTU030": {
+        "ReAV": 1,
+        "ReAIV": 9,
+        "EcAI": 4,
+        "EcAII": 1,
+        "EcAIII": 0
+    },
+    "Latescibacterota": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 27
+    },
+    "CG2-30-70-394": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Lindowbacteria": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Armatimonadota": {
+        "ReAV": 4,
+        "ReAIV": 17,
+        "EcAI": 3,
+        "EcAII": 4,
+        "EcAIII": 81
+    },
+    "UBP17": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 2,
+        "EcAII": 0,
+        "EcAIII": 1
+    },
+    "Calditrichota": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 14,
+        "EcAII": 3,
+        "EcAIII": 16
+    },
+    "UBA8481": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Nitrospinota": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 13
+    },
+    "Elusimicrobiota": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 10,
+        "EcAII": 37,
+        "EcAIII": 4
+    },
+    "T1Sed10-126": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Methylomirabilota": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 1,
+        "EcAII": 14,
+        "EcAIII": 39
+    },
+    "CLD3": {
+        "ReAV": 0,
+        "ReAIV": 1,
+        "EcAI": 3,
+        "EcAII": 1,
+        "EcAIII": 3
+    },
+    "Calescibacterota": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Sumerlaeota": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 2
+    },
+    "TA06": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 2
+    },
+    "Goldbacteria": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Myxococcota": {
+        "ReAV": 27,
+        "ReAIV": 61,
+        "EcAI": 194,
+        "EcAII": 53,
+        "EcAIII": 207
+    },
+    "Coprothermobacterota": {
+        "ReAV": 3,
+        "ReAIV": 2,
         "EcAI": 0,
         "EcAII": 0,
         "EcAIII": 0
@@ -615,60 +818,123 @@
         "EcAII": 0,
         "EcAIII": 0
     },
-    "Bipolaricaulota": {
+    "Proteobacteria": {
+        "ReAV": 393,
+        "ReAIV": 2914,
+        "EcAI": 4101,
+        "EcAII": 6535,
+        "EcAIII": 5319
+    },
+    "UBP14": {
         "ReAV": 0,
         "ReAIV": 0,
-        "EcAI": 2,
-        "EcAII": 5,
+        "EcAI": 0,
+        "EcAII": 2,
+        "EcAIII": 0
+    },
+    "DQWO01": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Dormibacterota": {
+        "ReAV": 4,
+        "ReAIV": 30,
+        "EcAI": 0,
+        "EcAII": 3,
+        "EcAIII": 43
+    },
+    "Firmicutes": {
+        "ReAV": 386,
+        "ReAIV": 320,
+        "EcAI": 427,
+        "EcAII": 2276,
+        "EcAIII": 306
+    },
+    "Thermotogota": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 42,
+        "EcAIII": 21
+    },
+    "SM23-31": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
         "EcAIII": 1
     },
-    "Edwardsbacteria": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 3,
+    "Firmicutes_D": {
+        "ReAV": 3,
+        "ReAIV": 20,
+        "EcAI": 2,
         "EcAII": 6,
         "EcAIII": 0
     },
-    "J088": {
+    "SpSt-318": {
         "ReAV": 0,
         "ReAIV": 0,
         "EcAI": 0,
         "EcAII": 0,
         "EcAIII": 0
     },
-    "Dependentiae": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "Deinococcota": {
-        "ReAV": 47,
-        "ReAIV": 31,
-        "EcAI": 17,
-        "EcAII": 72,
-        "EcAIII": 48
-    },
-    "Nitrospinota_A": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 3,
-        "EcAIII": 0
-    },
-    "FCPU426": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "SpSt-1050": {
+    "RBG-13-66-14": {
         "ReAV": 0,
         "ReAIV": 0,
         "EcAI": 0,
         "EcAII": 1,
+        "EcAIII": 2
+    },
+    "OLB16": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 2
+    },
+    "UBP13": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "UBA9089": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 1,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Bdellovibrionota": {
+        "ReAV": 18,
+        "ReAIV": 52,
+        "EcAI": 103,
+        "EcAII": 17,
+        "EcAIII": 33
+    },
+    "Fermentibacterota": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 2,
+        "EcAII": 21,
+        "EcAIII": 0
+    },
+    "Hydrogenedentota": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 1,
+        "EcAII": 0,
+        "EcAIII": 7
+    },
+    "Thermosulfidibacterota": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 0,
+        "EcAII": 0,
         "EcAIII": 0
     },
     "QNDG01": {
@@ -678,170 +944,9 @@
         "EcAII": 3,
         "EcAIII": 5
     },
-    "Planctomycetota": {
-        "ReAV": 10,
-        "ReAIV": 80,
-        "EcAI": 150,
-        "EcAII": 84,
-        "EcAIII": 538
-    },
-    "Eisenbacteria": {
-        "ReAV": 4,
-        "ReAIV": 11,
-        "EcAI": 4,
-        "EcAII": 4,
-        "EcAIII": 5
-    },
-    "Dormibacterota": {
-        "ReAV": 4,
-        "ReAIV": 30,
-        "EcAI": 0,
-        "EcAII": 3,
-        "EcAIII": 43
-    },
-    "Patescibacteria": {
+    "SLNR01": {
         "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 197,
-        "EcAII": 61,
-        "EcAIII": 7
-    },
-    "UBA9089": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 1,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "Desulfobacterota_D": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 1
-    },
-    "SpSt-956": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 1,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "Desulfobacterota_B": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 30,
-        "EcAIII": 28
-    },
-    "Firmicutes_B": {
-        "ReAV": 17,
-        "ReAIV": 44,
-        "EcAI": 22,
-        "EcAII": 32,
-        "EcAIII": 19
-    },
-    "Nitrospirota_A": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 5
-    },
-    "Firmicutes_E": {
-        "ReAV": 8,
-        "ReAIV": 23,
-        "EcAI": 2,
-        "EcAII": 23,
-        "EcAIII": 9
-    },
-    "Muirbacteria": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 1,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "RUG730": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "Firmicutes_D": {
-        "ReAV": 3,
-        "ReAIV": 20,
-        "EcAI": 2,
-        "EcAII": 6,
-        "EcAIII": 0
-    },
-    "4572-55": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 2,
-        "EcAIII": 1
-    },
-    "Fusobacteriota": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 56,
-        "EcAII": 0,
-        "EcAIII": 26
-    },
-    "Thermotogota": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 42,
-        "EcAIII": 21
-    },
-    "UBA8481": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "Elusimicrobiota": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 10,
-        "EcAII": 37,
-        "EcAIII": 4
-    },
-    "CG03": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 1,
-        "EcAII": 1,
-        "EcAIII": 0
-    },
-    "T1Sed10-126": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "KSB1": {
-        "ReAV": 0,
-        "ReAIV": 7,
-        "EcAI": 10,
-        "EcAII": 15,
-        "EcAIII": 21
-    },
-    "Desulfobacterota": {
-        "ReAV": 4,
-        "ReAIV": 17,
-        "EcAI": 68,
-        "EcAII": 215,
-        "EcAIII": 42
-    },
-    "Schekmanbacteria": {
-        "ReAV": 0,
-        "ReAIV": 0,
+        "ReAIV": 1,
         "EcAI": 0,
         "EcAII": 0,
         "EcAIII": 0
@@ -853,35 +958,7 @@
         "EcAII": 0,
         "EcAIII": 0
     },
-    "Aureabacteria": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "Coprothermobacterota": {
-        "ReAV": 3,
-        "ReAIV": 2,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "Synergistota": {
-        "ReAV": 0,
-        "ReAIV": 2,
-        "EcAI": 54,
-        "EcAII": 67,
-        "EcAIII": 1
-    },
-    "SLNR01": {
-        "ReAV": 0,
-        "ReAIV": 1,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "Gemmatimonadota_A": {
+    "SpSt-956": {
         "ReAV": 0,
         "ReAIV": 0,
         "EcAI": 1,
@@ -895,151 +972,74 @@
         "EcAII": 239,
         "EcAIII": 1
     },
-    "SpSt-318": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "SM23-31": {
+    "TA06_A": {
         "ReAV": 0,
         "ReAIV": 0,
         "EcAI": 0,
         "EcAII": 0,
         "EcAIII": 1
     },
-    "Zixibacteria": {
-        "ReAV": 10,
-        "ReAIV": 16,
-        "EcAI": 3,
-        "EcAII": 11,
-        "EcAIII": 9
-    },
-    "Calditrichota": {
+    "Margulisbacteria": {
         "ReAV": 0,
         "ReAIV": 0,
-        "EcAI": 14,
+        "EcAI": 0,
         "EcAII": 3,
-        "EcAIII": 16
+        "EcAIII": 0
     },
-    "AABM5-125-24": {
+    "KSB1": {
         "ReAV": 0,
-        "ReAIV": 3,
-        "EcAI": 2,
-        "EcAII": 4,
-        "EcAIII": 2
+        "ReAIV": 7,
+        "EcAI": 10,
+        "EcAII": 15,
+        "EcAIII": 21
     },
-    "Gemmatimonadota": {
-        "ReAV": 46,
-        "ReAIV": 114,
-        "EcAI": 41,
-        "EcAII": 106,
-        "EcAIII": 227
-    },
-    "Poribacteria": {
-        "ReAV": 2,
-        "ReAIV": 5,
+    "JABMQX01": {
+        "ReAV": 0,
+        "ReAIV": 0,
         "EcAI": 0,
         "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Patescibacteria": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 197,
+        "EcAII": 61,
         "EcAIII": 7
     },
-    "CLD3": {
+    "Bdellovibrionota_C": {
         "ReAV": 0,
         "ReAIV": 1,
-        "EcAI": 3,
-        "EcAII": 1,
-        "EcAIII": 3
-    },
-    "UBP7_A": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
+        "EcAI": 4,
         "EcAII": 0,
-        "EcAIII": 0
+        "EcAIII": 13
     },
-    "Aureabacteria_A": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
+    "Marinisomatota": {
+        "ReAV": 44,
+        "ReAIV": 33,
+        "EcAI": 36,
+        "EcAII": 56,
+        "EcAIII": 113
     },
-    "Cyanobacteria": {
-        "ReAV": 656,
-        "ReAIV": 521,
-        "EcAI": 14,
-        "EcAII": 63,
-        "EcAIII": 470
-    },
-    "Fermentibacterota": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 2,
-        "EcAII": 21,
-        "EcAIII": 0
-    },
-    "Goldbacteria": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "Bacteroidota": {
-        "ReAV": 2,
-        "ReAIV": 44,
-        "EcAI": 4895,
-        "EcAII": 1154,
-        "EcAIII": 5682
-    },
-    "SZUA-182": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "CSSED10-310": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 1,
-        "EcAIII": 0
-    },
-    "Proteobacteria": {
-        "ReAV": 393,
-        "ReAIV": 2914,
-        "EcAI": 4101,
-        "EcAII": 6535,
-        "EcAIII": 5319
-    },
-    "Chrysiogenetota": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "UBP18": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "Desulfobacterota_E": {
-        "ReAV": 0,
-        "ReAIV": 0,
-        "EcAI": 0,
-        "EcAII": 0,
-        "EcAIII": 0
-    },
-    "Verrucomicrobiota": {
+    "Chlamydiota": {
         "ReAV": 1,
-        "ReAIV": 3,
-        "EcAI": 53,
-        "EcAII": 126,
-        "EcAIII": 256
+        "ReAIV": 0,
+        "EcAI": 1,
+        "EcAII": 6,
+        "EcAIII": 1
+    },
+    "Muirbacteria": {
+        "ReAV": 0,
+        "ReAIV": 0,
+        "EcAI": 1,
+        "EcAII": 0,
+        "EcAIII": 0
+    },
+    "Campylobacterota": {
+        "ReAV": 2,
+        "ReAIV": 1,
+        "EcAI": 83,
+        "EcAII": 379,
+        "EcAIII": 31
     }
 }
