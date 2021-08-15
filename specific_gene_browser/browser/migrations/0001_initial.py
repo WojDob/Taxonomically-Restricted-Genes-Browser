@@ -8,33 +8,83 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='TaxonomicUnit',
+            name="TaxonomicUnit",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=30, unique=True)),
-                ('parent', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='browser.TaxonomicUnit')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=30, unique=True)),
+                (
+                    "parent",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        to="browser.TaxonomicUnit",
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='Taxon',
+            name="Taxon",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=250)),
-                ('parent', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='child_taxons', to='browser.Taxon')),
-                ('taxonomic_unit', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='taxons', to='browser.TaxonomicUnit')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=250)),
+                (
+                    "parent",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="child_taxons",
+                        to="browser.Taxon",
+                    ),
+                ),
+                (
+                    "taxonomic_unit",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="taxons",
+                        to="browser.TaxonomicUnit",
+                    ),
+                ),
             ],
         ),
         migrations.CreateModel(
-            name='SpecificGene',
+            name="SpecificGene",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('name', models.CharField(max_length=250)),
-                ('specific_to', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='specific_genes', to='browser.Taxon')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("name", models.CharField(max_length=250)),
+                (
+                    "specific_to",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE,
+                        related_name="specific_genes",
+                        to="browser.Taxon",
+                    ),
+                ),
             ],
         ),
     ]
