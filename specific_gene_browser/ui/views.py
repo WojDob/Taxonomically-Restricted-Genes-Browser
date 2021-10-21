@@ -1,4 +1,4 @@
-from browser.models import Taxon, TaxonomicUnit
+from browser.models import Taxon
 from django.views.generic.list import ListView
 from django.shortcuts import get_object_or_404
 
@@ -14,9 +14,8 @@ class GeneSearchView(ListView):
 
         if query:
             context['query'] = self.request.GET.get('q')
-            # TODO: change this hardcode
-            species_taxonomic_unit = get_object_or_404(
-                TaxonomicUnit, name="Species")
+            # TODO: allow searching higher taxons
+            species_taxonomic_unit = 6
             object_list = self.model.objects.filter(
                 name__icontains=query, taxonomic_unit=species_taxonomic_unit)
         else:
