@@ -7,18 +7,16 @@ class GeneSearchView(ListView):
     template_name = 'ui/home.html'
     model = Taxon
 
-
     def get_context_data(self, **kwargs):
         context = super(GeneSearchView, self).get_context_data(**kwargs)
         query = self.request.GET.get('q')
 
         if query:
-            context['query'] = self.request.GET.get('q')
-            # TODO: allow searching higher taxons
-            species_taxonomic_unit = 6
-            object_list = self.model.objects.filter(
-                name__icontains=query, taxonomic_unit=species_taxonomic_unit)
-        else:
-            object_list = self.model.objects.none()
-        context["object_list"] = object_list
+            context['query'] = query
+            try:
+                context["object_list"] = Taxon.objects.get(
+                    name__iexact=query).get_all_species()
+            except Taxon.DoesNotExist:
+                context["object_list"] = None
+
         return context

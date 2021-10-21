@@ -38,8 +38,15 @@ class Taxon(models.Model):
         return classification_list
 
     def get_all_species(self):
-        # TODO: implement
-        pass
+        return list(self.search_for_species())
+
+    def search_for_species(self):
+        if not self.child_taxons.all():
+            yield self
+
+        for child in self.child_taxons.all():
+            for leaf in child.search_for_species():
+                yield leaf
     
     def __str__(self):
         return "({}) {}".format(self.get_taxonomic_unit_display(), self.name)
