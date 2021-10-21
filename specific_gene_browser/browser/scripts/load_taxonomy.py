@@ -39,7 +39,7 @@ def load_taxons(filepath):
 
     for counter, row in enumerate(read_tsv):
         tree = row[16].split(";")
-        protein_count = row[64]???
+        protein_count = row[88]
 
         for i in range(len(tree)):
             if i == 0:
