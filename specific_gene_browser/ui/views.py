@@ -1,6 +1,8 @@
+import json
+
 from browser.models import Taxon
-from django.views.generic.list import ListView
 from django.shortcuts import get_object_or_404
+from django.views.generic.list import ListView
 
 
 class GeneSearchView(ListView):
@@ -10,6 +12,9 @@ class GeneSearchView(ListView):
     def get_context_data(self, **kwargs):
         context = super(GeneSearchView, self).get_context_data(**kwargs)
         query = self.request.GET.get('q')
+
+        context['taxon_names'] = json.dumps(
+            list(Taxon.objects.all().values_list('name', flat=True)))
         if query:
             context['query'] = query
             try:

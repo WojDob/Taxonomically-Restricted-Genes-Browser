@@ -6,8 +6,8 @@
 <h1>Hello world</h1>
 
 <form method='GET'>
-    <div class="input-group m-4">
-        <input class="form-control" type='text' name='q' value='{{ request.GET.q }}'>
+    <div class="input-group m-4" id="the-basics">
+        <input class="typeahead form-control" type='text' name='q' value='{{ request.GET.q }}'>
         <div class="input-group-append">
             <button class="btn btn-outline-secondary" type="submit">Search Species</button>
         </div>
@@ -23,4 +23,46 @@
 {% endfor %}
 {% endif %}
 
+
+
+
+
 {% endblock content %}
+
+{% block scripts %}
+<script type="text/javascript">
+    var substringMatcher = function(strs) {
+        return function findMatches(q, cb) {
+            var matches, substringRegex;
+
+            // an array that will be populated with substring matches
+            matches = [];
+
+            // regex used to determine if a string contains the substring `q`
+            substrRegex = new RegExp(q, 'i');
+
+            // iterate through the pool of strings and for any string that
+            // contains the substring `q`, add it to the `matches` array
+            $.each(strs, function(i, str) {
+                if (substrRegex.test(str)) {
+                    matches.push(str);
+                }
+            });
+
+            cb(matches);
+        };
+    };
+
+    var taxon_names ={{ taxon_names|safe }};
+
+    $('.typeahead').typeahead({
+        hint: true,
+        highlight: true,
+        minLength: 1
+    },
+    {
+        name: 'taxon_names',
+        source: substringMatcher(taxon_names)
+    });
+</script>
+{% endblock %}
