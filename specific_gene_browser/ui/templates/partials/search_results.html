@@ -1,6 +1,21 @@
 {% if object_list and query %}
 <h1>Search results for {{ query }}</h1>
-{% for result in object_list %}
-<li>{{ result.accession }} {{ result.name }} {{ result.protein_count }}</li>
-{% endfor %}
+<table id="resultsTable" class="display">
+    <thead>
+        <tr>
+            <th>Accession</th>
+            <th>Name</th>
+            <th>Protein count</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for result in object_list %}
+        <tr>
+            <td>{{ result.accession }}</td>
+            <td>{{ result.name }}</td>
+            <td>{{ result.protein_count }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
 {% endif %}
