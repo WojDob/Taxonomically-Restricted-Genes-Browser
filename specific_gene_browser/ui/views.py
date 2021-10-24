@@ -6,7 +6,7 @@ from django.views.generic.list import ListView
 
 
 class GeneSearchView(ListView):
-    template_name = 'ui/home.html'
+    template_name = 'home.html'
     model = Taxon
 
     def get_context_data(self, **kwargs):

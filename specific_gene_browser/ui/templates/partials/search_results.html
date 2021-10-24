@@ -1,0 +1,6 @@
+{% if object_list and query %}
+<h1>Search results for {{ query }}</h1>
+{% for result in object_list %}
+<li>{{ result.name }}</li>
+{% endfor %}
+{% endif %}

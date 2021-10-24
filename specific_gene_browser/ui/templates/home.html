@@ -1,37 +1,24 @@
-{% extends "ui/base.html" %}
+{% extends "base.html" %}
+
+{% load static %}
 
 {% block content %}
 
 
 <h1>Hello world</h1>
 
-<form method='GET'>
-    <div class="input-group m-4" id="the-basics">
-        <input class="typeahead form-control" type='text' name='q' value='{{ request.GET.q }}'>
-        <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="submit">Search Species</button>
-        </div>
-        
-    </div>
 
-</form>
+{% include 'search.html' %}
 
-{% if object_list and query %}
-<h1>Search results for {{ query }}</h1>
-{% for result in object_list %}
-<p>{{ result.name }}</p>
-{% endfor %}
-{% endif %}
-
-
-
+{% include 'partials/search_results.html' %}
 
 
 {% endblock content %}
 
+
 {% block scripts %}
 <script type="text/javascript">
-    var substringMatcher = function(strs) {
+    var substringMatcher = function (strs) {
         return function findMatches(q, cb) {
             var matches, substringRegex;
 
@@ -43,7 +30,7 @@
 
             // iterate through the pool of strings and for any string that
             // contains the substring `q`, add it to the `matches` array
-            $.each(strs, function(i, str) {
+            $.each(strs, function (i, str) {
                 if (substrRegex.test(str)) {
                     matches.push(str);
                 }
@@ -53,16 +40,16 @@
         };
     };
 
-    var taxon_names ={{ taxon_names|safe }};
+    var taxon_names = {{ taxon_names| safe }};
 
     $('.typeahead').typeahead({
         hint: true,
         highlight: true,
         minLength: 1
     },
-    {
-        name: 'taxon_names',
-        source: substringMatcher(taxon_names)
-    });
+        {
+            name: 'taxon_names',
+            source: substringMatcher(taxon_names)
+        });
 </script>
 {% endblock %}
