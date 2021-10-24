@@ -10,7 +10,6 @@ class GeneSearchView(ListView):
     def get_context_data(self, **kwargs):
         context = super(GeneSearchView, self).get_context_data(**kwargs)
         query = self.request.GET.get('q')
-
         if query:
             context['query'] = query
             try:
@@ -18,5 +17,4 @@ class GeneSearchView(ListView):
                     name__iexact=query).get_all_species()
             except Taxon.DoesNotExist:
                 context["object_list"] = None
-
         return context

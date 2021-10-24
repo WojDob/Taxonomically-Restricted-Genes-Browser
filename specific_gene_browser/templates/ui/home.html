@@ -16,7 +16,7 @@
 
 </form>
 
-{% if object_list %}
+{% if object_list and query %}
 <h1>Search results for {{ query }}</h1>
 {% for result in object_list %}
 <p>{{ result.name }}</p>
