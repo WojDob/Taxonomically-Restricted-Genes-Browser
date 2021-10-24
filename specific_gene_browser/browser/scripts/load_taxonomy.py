@@ -40,10 +40,10 @@ def load_taxons(filepath):
     for counter, row in enumerate(read_tsv):
         tree = row[16].split(";")
         protein_count = row[88]
+        accession = row[0]
 
         for i in range(len(tree)):
             if i == 0:
-
                 previous_record, created = Taxon.objects.get_or_create(
                     name=tree[i][3:],
                     taxonomic_unit=taxonomy_symbols[tree[i][0]],
@@ -56,7 +56,8 @@ def load_taxons(filepath):
                         name=tree[i][3:],
                         taxonomic_unit=taxonomy_symbols[tree[i][0]],
                         parent=previous_record,
-                        protein_count=protein_count
+                        protein_count=protein_count,
+                        accession=accession
                     )
                 else:
                     previous_record, created = Taxon.objects.get_or_create(

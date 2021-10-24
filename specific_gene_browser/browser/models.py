@@ -4,7 +4,6 @@ from . import choices
 
 class Taxon(models.Model):
     name = models.CharField(max_length=250)
-    accession = models.CharField(max_length=50)
     taxonomic_unit = models.PositiveSmallIntegerField(
         null=False,
         blank=True,
@@ -15,7 +14,8 @@ class Taxon(models.Model):
         "self", on_delete=models.CASCADE, null=True, related_name="child_taxons", db_index=True
     )
 
-    # Genome related fields
+    # Species related fields
+    accession = models.CharField(max_length=50)
     protein_count = models.PositiveIntegerField(null=True, blank=True)
     species_isolation_index = models.FloatField(null=True, blank=True)
     genus_isolation_index = models.FloatField(null=True, blank=True)
@@ -37,6 +37,14 @@ class Taxon(models.Model):
             parent = parent.parent
         return classification_list
 
+    def get_higher_taxon(self, unit_choice):
+        if self.taxonomic_unit >= unit_choice:
+            parent = self
+            while parent.taxonomic_unit != unit_choice:
+                parent = parent.parent
+            return parent
+        return None
+            
     def get_all_species(self):
         return list(self.search_for_species())
 
