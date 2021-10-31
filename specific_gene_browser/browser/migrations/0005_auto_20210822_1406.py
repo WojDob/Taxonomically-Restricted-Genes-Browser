@@ -6,18 +6,18 @@ import django.db.models.deletion
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('browser', '0004_auto_20210822_1222'),
-    ]
+    dependencies = [("browser", "0004_auto_20210822_1222")]
 
     operations = [
-        migrations.RemoveField(
-            model_name='taxon',
-            name='parent',
-        ),
+        migrations.RemoveField(model_name="taxon", name="parent"),
         migrations.AddField(
-            model_name='taxon',
-            name='child',
-            field=models.ForeignKey(null=True, on_delete=django.db.models.deletion.SET_NULL, related_name='parent_taxons', to='browser.taxon'),
+            model_name="taxon",
+            name="child",
+            field=models.ForeignKey(
+                null=True,
+                on_delete=django.db.models.deletion.SET_NULL,
+                related_name="parent_taxons",
+                to="browser.taxon",
+            ),
         ),
     ]

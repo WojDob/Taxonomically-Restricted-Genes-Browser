@@ -5,14 +5,10 @@ from django.db import migrations
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('browser', '0009_auto_20211019_0614'),
-    ]
+    dependencies = [("browser", "0009_auto_20211019_0614")]
 
     operations = [
         migrations.RenameField(
-            model_name='taxon',
-            old_name='protein_number',
-            new_name='protein_count',
-        ),
+            model_name="taxon", old_name="protein_number", new_name="protein_count"
+        )
     ]

@@ -5,6 +5,7 @@ import os
 from browser.models import Taxon
 import time
 from browser import choices
+
 """
 To run: 
     ./manage.py runscript load_taxonomy --script-args ~/Downloads/metadata/bac120_metadata_r202.tsv
@@ -57,7 +58,7 @@ def load_taxons(filepath):
                         taxonomic_unit=taxonomy_symbols[tree[i][0]],
                         parent=previous_record,
                         protein_count=protein_count,
-                        accession=accession
+                        accession=accession,
                     )
                 else:
                     previous_record, created = Taxon.objects.get_or_create(

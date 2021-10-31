@@ -6,45 +6,53 @@ import django.db.models.deletion
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('browser', '0007_alter_taxon_options'),
-    ]
+    dependencies = [("browser", "0007_alter_taxon_options")]
 
     operations = [
         migrations.CreateModel(
-            name='TaxonomicallyRestrictedGene',
+            name="TaxonomicallyRestrictedGene",
             fields=[
-                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('accession', models.CharField(max_length=50)),
+                (
+                    "id",
+                    models.BigAutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("accession", models.CharField(max_length=50)),
             ],
         ),
         migrations.AddField(
-            model_name='taxon',
-            name='accession',
-            field=models.CharField(default='test', max_length=50),
+            model_name="taxon",
+            name="accession",
+            field=models.CharField(default="test", max_length=50),
             preserve_default=False,
         ),
         migrations.AddField(
-            model_name='taxon',
-            name='genus_isolation_index',
+            model_name="taxon",
+            name="genus_isolation_index",
             field=models.FloatField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='taxon',
-            name='protein_number',
+            model_name="taxon",
+            name="protein_number",
             field=models.PositiveIntegerField(blank=True, null=True),
         ),
         migrations.AddField(
-            model_name='taxon',
-            name='species_isolation_index',
+            model_name="taxon",
+            name="species_isolation_index",
             field=models.FloatField(blank=True, null=True),
         ),
-        migrations.DeleteModel(
-            name='SpecificGene',
-        ),
+        migrations.DeleteModel(name="SpecificGene"),
         migrations.AddField(
-            model_name='taxonomicallyrestrictedgene',
-            name='origin_genome',
-            field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='taxonomically_restricted_genes', to='browser.taxon'),
+            model_name="taxonomicallyrestrictedgene",
+            name="origin_genome",
+            field=models.ForeignKey(
+                on_delete=django.db.models.deletion.CASCADE,
+                related_name="taxonomically_restricted_genes",
+                to="browser.taxon",
+            ),
         ),
     ]

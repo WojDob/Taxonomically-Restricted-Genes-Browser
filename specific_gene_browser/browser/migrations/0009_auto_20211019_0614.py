@@ -5,17 +5,24 @@ from django.db import migrations, models
 
 class Migration(migrations.Migration):
 
-    dependencies = [
-        ('browser', '0008_auto_20211002_1224'),
-    ]
+    dependencies = [("browser", "0008_auto_20211002_1224")]
 
     operations = [
         migrations.AlterField(
-            model_name='taxon',
-            name='taxonomic_unit',
-            field=models.PositiveSmallIntegerField(blank=True, choices=[(0, 'Domain'), (1, 'Phylum'), (2, 'Class'), (3, 'Order'), (4, 'Family'), (5, 'Genus'), (6, 'Species')]),
+            model_name="taxon",
+            name="taxonomic_unit",
+            field=models.PositiveSmallIntegerField(
+                blank=True,
+                choices=[
+                    (0, "Domain"),
+                    (1, "Phylum"),
+                    (2, "Class"),
+                    (3, "Order"),
+                    (4, "Family"),
+                    (5, "Genus"),
+                    (6, "Species"),
+                ],
+            ),
         ),
-        migrations.DeleteModel(
-            name='TaxonomicUnit',
-        ),
+        migrations.DeleteModel(name="TaxonomicUnit"),
     ]

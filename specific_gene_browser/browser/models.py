@@ -5,13 +5,15 @@ from . import choices
 class Taxon(models.Model):
     name = models.CharField(max_length=250)
     taxonomic_unit = models.PositiveSmallIntegerField(
-        null=False,
-        blank=True,
-        choices=choices.TAXONOMIC_UNIT,
+        null=False, blank=True, choices=choices.TAXONOMIC_UNIT
     )
 
     parent = models.ForeignKey(
-        "self", on_delete=models.CASCADE, null=True, related_name="child_taxons", db_index=True
+        "self",
+        on_delete=models.CASCADE,
+        null=True,
+        related_name="child_taxons",
+        db_index=True,
     )
 
     # Species related fields
@@ -21,7 +23,7 @@ class Taxon(models.Model):
     genus_isolation_index = models.FloatField(null=True, blank=True)
 
     class Meta:
-        ordering = ['taxonomic_unit']
+        ordering = ["taxonomic_unit"]
 
     def print_whole_classification(self):
         parent = self
@@ -44,7 +46,7 @@ class Taxon(models.Model):
                 parent = parent.parent
             return parent
         return None
-            
+
     def get_all_species(self):
         return list(self.search_for_species())
 
@@ -55,7 +57,7 @@ class Taxon(models.Model):
         for child in self.child_taxons.all():
             for leaf in child.search_for_species():
                 yield leaf
-    
+
     def __str__(self):
         return "({}) {}".format(self.get_taxonomic_unit_display(), self.name)
 
