@@ -3,18 +3,18 @@ from . import choices
 
 
 class Taxon(models.Model):
-    name = models.CharField(max_length=250)
+    name = models.CharField(max_length=250, unique=True)
     taxonomic_unit = models.PositiveSmallIntegerField(
         null=False, blank=True, choices=choices.TAXONOMIC_UNIT
     )
 
-    parent = models.ForeignKey(
-        "self",
-        on_delete=models.CASCADE,
-        null=True,
-        related_name="child_taxons",
-        db_index=True,
-    )
+    # parent = models.ForeignKey(
+    #     "self",
+    #     on_delete=models.CASCADE,
+    #     null=True,
+    #     related_name="child_taxons",
+    #     db_index=True,
+    # )
 
     # Species related fields
     accession = models.CharField(max_length=50)
@@ -60,6 +60,16 @@ class Taxon(models.Model):
 
     def __str__(self):
         return "({}) {}".format(self.get_taxonomic_unit_display(), self.name)
+
+
+class Lineage(models.Model):
+    domain = models.ForeignKey(Taxon, related_name='domain', null=True, on_delete=models.CASCADE)
+    phylum = models.ForeignKey(Taxon, related_name='phylum', null=True, on_delete=models.CASCADE)
+    klass = models.ForeignKey(Taxon, related_name='klass', null=True, on_delete=models.CASCADE)
+    order = models.ForeignKey(Taxon, related_name='order', null=True, on_delete=models.CASCADE)
+    family = models.ForeignKey(Taxon, related_name='family', null=True, on_delete=models.CASCADE)
+    genus = models.ForeignKey(Taxon, related_name='genus', null=True, on_delete=models.CASCADE)
+    species = models.OneToOneField(Taxon, related_name='species', on_delete=models.CASCADE)    
 
 
 class TaxonomicallyRestrictedGene(models.Model):

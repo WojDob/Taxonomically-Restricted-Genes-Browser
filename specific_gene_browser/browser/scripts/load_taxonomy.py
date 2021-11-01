@@ -2,9 +2,11 @@ import csv
 from pprint import pprint
 from django.conf import settings
 import os
-from browser.models import Taxon
+from browser.models import Lineage, Taxon
 import time
 from browser import choices
+from django.db import transaction
+
 
 """
 To run: 
@@ -37,40 +39,76 @@ def load_taxons(filepath):
     }
 
     start = time.time()
-
+    to_create = list()
     for counter, row in enumerate(read_tsv):
         tree = row[16].split(";")
         protein_count = row[88]
         accession = row[0]
-
+        
         for i in range(len(tree)):
             if i == 0:
-                previous_record, created = Taxon.objects.get_or_create(
+                to_create.append(Taxon(
                     name=tree[i][3:],
                     taxonomic_unit=taxonomy_symbols[tree[i][0]],
-                    parent=None,
-                )
+                ))
+                
             else:
                 # if current taxon is a species, add protein count
                 if tree[i][0] == "s":
-                    previous_record, created = Taxon.objects.get_or_create(
+                    
+                    to_create.append(Taxon(
                         name=tree[i][3:],
                         taxonomic_unit=taxonomy_symbols[tree[i][0]],
-                        parent=previous_record,
                         protein_count=protein_count,
                         accession=accession,
-                    )
+                    ))
                 else:
-                    previous_record, created = Taxon.objects.get_or_create(
+                    
+                    to_create.append(Taxon(
                         name=tree[i][3:],
                         taxonomic_unit=taxonomy_symbols[tree[i][0]],
-                        parent=previous_record,
-                    )
-
-        if counter % 2500 == 0:
+                    ))
+        
+        if counter % 1000 == 0:
             print_stats(counter, start)
     tsv_file.close()
+    print("Creating objects...")
+    print(len(to_create))
+    Taxon.objects.bulk_create(to_create, ignore_conflicts=True)
 
+    print("Creating lineages")
+    tsv_file = open(filepath)
+    read_tsv = csv.reader(tsv_file, delimiter="\t")
+    next(read_tsv)  # Skip the first 'title' row.
+
+    start = time.time()
+    to_create = list()
+    for counter, row in enumerate(read_tsv):
+        tree = row[16].split(";")
+        lineage = Lineage()
+
+        for i in range(len(tree)):
+            if i == 0:
+                lineage.domain = Taxon.objects.get(name=tree[i][3:])
+            elif i == 1:
+                lineage.phylum = Taxon.objects.get(name=tree[i][3:])
+            elif i == 2:
+                lineage.klass = Taxon.objects.get(name=tree[i][3:])
+            elif i == 3:
+                lineage.order = Taxon.objects.get(name=tree[i][3:])
+            elif i == 4:
+                lineage.family = Taxon.objects.get(name=tree[i][3:])
+            elif i == 5:
+                lineage.genus = Taxon.objects.get(name=tree[i][3:])
+            elif i == 6:
+                lineage.species = Taxon.objects.get(name=tree[i][3:])
+        to_create.append(lineage)
+        if counter % 100 == 0:
+            print_stats(counter, start)
+    tsv_file.close()
+    print("Creating objects...")
+    print(len(to_create))
+    Lineage.objects.bulk_create(to_create, ignore_conflicts=True)
 
 def check_if_taxons_are_loaded():
     if Taxon.objects.count() > 0:
