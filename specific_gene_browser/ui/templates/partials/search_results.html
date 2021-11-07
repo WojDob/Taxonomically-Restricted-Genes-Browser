@@ -5,6 +5,8 @@
         <tr>
             <th>Accession</th>
             <th>Name</th>
+            <th>Family</th>
+            <th>Genus</th>
             <th>Protein count</th>
         </tr>
     </thead>
@@ -13,6 +15,8 @@
         <tr>
             <td>{{ result.accession }}</td>
             <td>{{ result.name }}</td>
+            <td>{{ result.family }}</td>
+            <td>{{ result.genus }}</td>
             <td>{{ result.protein_count }}</td>
         </tr>
         {% endfor %}

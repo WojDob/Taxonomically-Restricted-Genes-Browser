@@ -23,7 +23,17 @@ class GeneSearchView(ListView):
                 searched_taxon = Taxon.objects.get(
                     name__iexact=query
                 )
-                context["object_list"] = searched_taxon.get_all_species()
+                object_list = list()
+                species = searched_taxon.get_all_species().select_related('family', 'genus')
+                for s in species:
+                    object_list.append({
+                        'accession': s.accession,
+                        'name': s.name,
+                        'family': s.family.name,
+                        'genus': s.genus.name,
+                        'protein_count': s.protein_count,
+                    })
+                context["object_list"] = object_list
             except Taxon.DoesNotExist:
                 context["object_list"] = None
         return context

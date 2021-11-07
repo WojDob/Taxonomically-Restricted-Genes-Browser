@@ -8,44 +8,42 @@ class Taxon(models.Model):
         null=False, blank=True, choices=choices.TAXONOMIC_UNIT
     )
 
-    # parent = models.ForeignKey(
-    #     "self",
-    #     on_delete=models.CASCADE,
-    #     null=True,
-    #     related_name="child_taxons",
-    #     db_index=True,
-    # )
-
     # Species related fields
     accession = models.CharField(max_length=50)
     protein_count = models.PositiveIntegerField(null=True, blank=True)
     species_isolation_index = models.FloatField(null=True, blank=True)
     genus_isolation_index = models.FloatField(null=True, blank=True)
 
+    # Species' partial lineage for faster lookup
+    family = models.ForeignKey(
+        "self",related_name="f_species", null=True, on_delete=models.CASCADE)
+    genus = models.ForeignKey(
+        "self",related_name="g_species", null=True, on_delete=models.CASCADE)
+
     class Meta:
         ordering = ["taxonomic_unit"]
 
     def get_lineages(self):
         if self.taxonomic_unit == choices.UNIT_DOMAIN:
-            lineages = self.domain.all()
+            lineages = self.lineages_domain.all()
         elif self.taxonomic_unit == choices.UNIT_PHYLUM:
-            lineages = self.phylum.all()
+            lineages = self.lineages_phylum.all()
         elif self.taxonomic_unit == choices.UNIT_CLASS:
-            lineages = self.klass.all()
+            lineages = self.lineages_klass.all()
         elif self.taxonomic_unit == choices.UNIT_ORDER:
-            lineages = self.order.all()
+            lineages = self.lineages_order.all()
         elif self.taxonomic_unit == choices.UNIT_FAMILY:
-            lineages = self.family.all()
+            lineages = self.lineages_family.all()
         elif self.taxonomic_unit == choices.UNIT_GENUS:
-            lineages = self.genus.all()
+            lineages = self.lineages_genus.all()
         elif self.taxonomic_unit == choices.UNIT_SPECIES:
-            lineages = self.species.all()
+            lineages = self.lineages_species.all()
         return lineages
 
     def get_all_species(self):
         species_ids = self.get_lineages().values_list(
             'species')
-        return list(Taxon.objects.filter(id__in=species_ids))
+        return Taxon.objects.filter(id__in=species_ids)
 
     def get_higher_taxon(self, taxon_name):
         classification = self.get_classification()
@@ -65,19 +63,19 @@ class Taxon(models.Model):
 
 class Lineage(models.Model):
     domain = models.ForeignKey(
-        Taxon, related_name='domain', null=True, on_delete=models.CASCADE)
+        Taxon, related_name='lineages_domain', null=True, on_delete=models.CASCADE)
     phylum = models.ForeignKey(
-        Taxon, related_name='phylum', null=True, on_delete=models.CASCADE)
+        Taxon, related_name='lineages_phylum', null=True, on_delete=models.CASCADE)
     klass = models.ForeignKey(
-        Taxon, related_name='klass', null=True, on_delete=models.CASCADE)
+        Taxon, related_name='lineages_klass', null=True, on_delete=models.CASCADE)
     order = models.ForeignKey(
-        Taxon, related_name='order', null=True, on_delete=models.CASCADE)
+        Taxon, related_name='lineages_order', null=True, on_delete=models.CASCADE)
     family = models.ForeignKey(
-        Taxon, related_name='family', null=True, on_delete=models.CASCADE)
+        Taxon, related_name='lineages_family', null=True, on_delete=models.CASCADE)
     genus = models.ForeignKey(
-        Taxon, related_name='genus', null=True, on_delete=models.CASCADE)
-    species = models.OneToOneField(
-        Taxon, related_name='species', on_delete=models.CASCADE)
+        Taxon, related_name='lineages_genus', null=True, on_delete=models.CASCADE)
+    species = models.ForeignKey(
+        Taxon, related_name='lineages_species', null=True, on_delete=models.CASCADE)
 
     def get_model_fields(self):
         return [f.name for f in self._meta.get_fields() if f.name != "id"]
