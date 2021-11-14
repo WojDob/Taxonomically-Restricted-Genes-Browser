@@ -1,16 +1,16 @@
 import csv
-from pprint import pprint
-from django.conf import settings
 import os
-from browser.models import Lineage, Taxon
 import time
-from browser import choices
-from django.db import transaction
+from pprint import pprint
 
+from browser import choices
+from browser.models import Genome, Lineage, Taxon
+from django.conf import settings
+from django.db import transaction
 
 """
 To run: 
-    ./manage.py runscript load_taxonomy --script-args ~/Downloads/metadata/bac120_metadata_r202.tsv
+    ./manage.py runscript load_taxonomy --script-args ~/Downloads/bac120_metadata_r202.tsv
 
 """
 
@@ -18,7 +18,7 @@ To run:
 def run(*args):
     # TODO: Add database wipe before every run?
 
-    # check_if_taxons_are_loaded()
+    check_if_taxons_are_loaded()
     load_taxons(args[0])
 
 
@@ -37,104 +37,88 @@ def load_taxons(filepath):
         "g": choices.UNIT_GENUS,
         "s": choices.UNIT_SPECIES,
     }
-
-    # start = time.time()
-    # to_create = list()
-    # for counter, row in enumerate(read_tsv):
-    #     tree = row[16].split(";")
-    #     protein_count = row[88]
-    #     accession = row[0]
-        
-    #     for i in range(len(tree)):
-    #         if i == 0:
-    #             to_create.append(Taxon(
-    #                 name=tree[i][3:],
-    #                 taxonomic_unit=taxonomy_symbols[tree[i][0]],
-    #             ))
-                
-    #         else:
-    #             # if current taxon is a species, add protein count
-    #             if tree[i][0] == "s":
-                    
-    #                 to_create.append(Taxon(
-    #                     name=tree[i][3:],
-    #                     taxonomic_unit=taxonomy_symbols[tree[i][0]],
-    #                     protein_count=protein_count,
-    #                     accession=accession,
-    #                 ))
-    #             else:
-                    
-    #                 to_create.append(Taxon(
-    #                     name=tree[i][3:],
-    #                     taxonomic_unit=taxonomy_symbols[tree[i][0]],
-    #                 ))
-        
-    #     if counter % 1000 == 0:
-    #         print_stats(counter, start)
-    # tsv_file.close()
-    # print("Creating objects...")
-    # print(len(to_create))
-    # Taxon.objects.bulk_create(to_create, ignore_conflicts=True)
-
-    # print("Creating lineages")
-    # tsv_file = open(filepath)
-    # read_tsv = csv.reader(tsv_file, delimiter="\t")
-    # next(read_tsv)  # Skip the first 'title' row.
-
-    # start = time.time()
-    # to_create = list()
-    # for counter, row in enumerate(read_tsv):
-    #     tree = row[16].split(";")
-    #     lineage = Lineage()
-
-    #     for i in range(len(tree)):
-    #         if i == 0:
-    #             lineage.domain = Taxon.objects.get(name=tree[i][3:])
-    #         elif i == 1:
-    #             lineage.phylum = Taxon.objects.get(name=tree[i][3:])
-    #         elif i == 2:
-    #             lineage.klass = Taxon.objects.get(name=tree[i][3:])
-    #         elif i == 3:
-    #             lineage.order = Taxon.objects.get(name=tree[i][3:])
-    #         elif i == 4:
-    #             lineage.family = Taxon.objects.get(name=tree[i][3:])
-    #         elif i == 5:
-    #             lineage.genus = Taxon.objects.get(name=tree[i][3:])
-    #         elif i == 6:
-    #             lineage.species = Taxon.objects.get(name=tree[i][3:])
-    #     to_create.append(lineage)
-    #     if counter % 100 == 0:
-    #         print_stats(counter, start)
-    # tsv_file.close()
-    # print("Creating objects...")
-    # Lineage.objects.bulk_create(to_create, ignore_conflicts=True)
-
-
-
-    print("Updating taxons")
+####################################################################################
+    print("Creating taxons")
+    start = time.time()
+    to_create = list()
+    for row in read_tsv:
+        gtdb_representative = row[15]
+        if gtdb_representative == "t":
+            tree = row[16].split(";")
+            for i in range(len(tree)):
+                to_create.append(Taxon(
+                    name=tree[i][3:],
+                    taxonomic_unit=taxonomy_symbols[tree[i][0]],
+                ))
+    tsv_file.close()
+    print(f"Bulk creating {len(to_create)} objects...")
+    Taxon.objects.bulk_create(to_create, ignore_conflicts=True)
+    print_stats(start)
+####################################################################################
+    print("Creating lineages")
     tsv_file = open(filepath)
     read_tsv = csv.reader(tsv_file, delimiter="\t")
     next(read_tsv)  # Skip the first 'title' row.
 
     start = time.time()
-    to_update = list()
-    
-    for counter, row in enumerate(read_tsv):
-        tree = row[16].split(";")
-        species = Taxon.objects.get(name=tree[-1][3:])
-        for i in range(len(tree)):
-            if i == 4:
-                species.family = Taxon.objects.get(name=tree[i][3:])
-            elif i == 5:
-                species.genus = Taxon.objects.get(name=tree[i][3:])
-        to_update.append(species)
-        if counter % 1000 == 0:
-            print_stats(counter, start)
+    to_create = list()
+    for row in read_tsv:
+        gtdb_representative = row[15]
+        if gtdb_representative == "t":
+            tree = row[16].split(";")
+            lineage = Lineage()
+            for i in range(len(tree)):
+                if i == 0:
+                    lineage.domain = Taxon.objects.get(
+                        name=tree[i][3:], taxonomic_unit=choices.UNIT_DOMAIN)
+                elif i == 1:
+                    lineage.phylum = Taxon.objects.get(
+                        name=tree[i][3:], taxonomic_unit=choices.UNIT_PHYLUM)
+                elif i == 2:
+                    lineage.klass = Taxon.objects.get(
+                        name=tree[i][3:], taxonomic_unit=choices.UNIT_CLASS)
+                elif i == 3:
+                    lineage.order = Taxon.objects.get(
+                        name=tree[i][3:], taxonomic_unit=choices.UNIT_ORDER)
+                elif i == 4:
+                    lineage.family = Taxon.objects.get(
+                        name=tree[i][3:], taxonomic_unit=choices.UNIT_FAMILY)
+                elif i == 5:
+                    lineage.genus = Taxon.objects.get(
+                        name=tree[i][3:], taxonomic_unit=choices.UNIT_GENUS)
+                elif i == 6:
+                    lineage.species = Taxon.objects.get(
+                        name=tree[i][3:], taxonomic_unit=choices.UNIT_SPECIES)
+            to_create.append(lineage)
     tsv_file.close()
-    print("Updating objects...")
-    Taxon.objects.bulk_update(to_update, ['family','genus'])
-
-
+    print(f"Bulk creating {len(to_create)} objects...")
+    Lineage.objects.bulk_create(to_create, ignore_conflicts=True)
+    print_stats(start)
+####################################################################################
+    print("Creating genomes")
+    tsv_file = open(filepath)
+    read_tsv = csv.reader(tsv_file, delimiter="\t")
+    next(read_tsv)  # Skip the first 'title' row.
+    start = time.time()
+    to_create = list()
+    for row in read_tsv:
+        gtdb_representative = row[15]
+        if gtdb_representative == "t":
+            tree = row[16].split(";")
+            protein_count = row[88]
+            accession = row[0]
+            name = tree[-1][3:]
+            to_create.append(Genome(
+                name=name,
+                protein_count=protein_count,
+                accession=accession,
+                lineage=Lineage.objects.get(species__name=name)
+            ))
+    tsv_file.close()
+    print(f"Bulk creating {len(to_create)} objects...")
+    Genome.objects.bulk_create(to_create, ignore_conflicts=True)
+    print_stats(start)
+####################################################################################
 
 
 def check_if_taxons_are_loaded():
@@ -143,8 +127,7 @@ def check_if_taxons_are_loaded():
         exit()
 
 
-def print_stats(counter, start):
-    print(counter)
+def print_stats(start):
     print("Elapsed time:")
     end = time.time()
     print(end - start)

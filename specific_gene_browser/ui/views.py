@@ -1,7 +1,7 @@
 import json
 
 from browser import choices
-from browser.models import Taxon
+from browser.models import Genome, Taxon
 from django.shortcuts import get_object_or_404
 from django.views.generic.list import ListView
 
@@ -23,15 +23,36 @@ class GeneSearchView(ListView):
                 searched_taxon = Taxon.objects.get(
                     name__iexact=query
                 )
+                taxonomic_unit = searched_taxon.taxonomic_unit
+                if taxonomic_unit == choices.UNIT_DOMAIN:
+                    genomes = Genome.objects.filter(lineage__domain=searched_taxon).select_related(
+                        'lineage__family', 'lineage__genus')
+                if taxonomic_unit == choices.UNIT_PHYLUM:
+                    genomes = Genome.objects.filter(lineage__phylum=searched_taxon).select_related(
+                        'lineage__family', 'lineage__genus')
+                if taxonomic_unit == choices.UNIT_CLASS:
+                    genomes = Genome.objects.filter(lineage__klass=searched_taxon).select_related(
+                        'lineage__family', 'lineage__genus')
+                if taxonomic_unit == choices.UNIT_ORDER:
+                    genomes = Genome.objects.filter(lineage__order=searched_taxon).select_related(
+                        'lineage__family', 'lineage__genus')
+                if taxonomic_unit == choices.UNIT_FAMILY:
+                    genomes = Genome.objects.filter(lineage__family=searched_taxon).select_related(
+                        'lineage__family', 'lineage__genus')
+                if taxonomic_unit == choices.UNIT_GENUS:
+                    genomes = Genome.objects.filter(lineage__genus=searched_taxon).select_related(
+                        'lineage__family', 'lineage__genus')
+                if taxonomic_unit == choices.UNIT_SPECIES:
+                    genomes = Genome.objects.filter(lineage__species=searched_taxon).select_related(
+                        'lineage__family', 'lineage__genus')
                 object_list = list()
-                species = searched_taxon.get_all_species().select_related('family', 'genus')
-                for s in species:
+                for g in genomes:
                     object_list.append({
-                        'accession': s.accession,
-                        'name': s.name,
-                        'family': s.family.name,
-                        'genus': s.genus.name,
-                        'protein_count': s.protein_count,
+                        'accession': g.accession,
+                        'name': g.name,
+                        'family': g.lineage.family.name,
+                        'genus': g.lineage.genus.name,
+                        'protein_count': g.protein_count,
                     })
                 context["object_list"] = object_list
             except Taxon.DoesNotExist:
