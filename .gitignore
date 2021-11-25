@@ -130,3 +130,6 @@ dmypy.json
 
 # project related
 collected_statics/
+
+# vscode for some reason
+.vscode
