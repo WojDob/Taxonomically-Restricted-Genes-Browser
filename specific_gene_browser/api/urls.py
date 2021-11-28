@@ -5,5 +5,5 @@ from .views import GenomeViewSet, TaxonNameViewSet
 router = DefaultRouter()
 
 router.register(r"genomes", GenomeViewSet, basename="genomes")
-router.register(r"taxons", TaxonNameViewSet, basename="taxons")
+router.register(r"taxon-names", TaxonNameViewSet, basename="taxon-names")
 urlpatterns = router.urls
