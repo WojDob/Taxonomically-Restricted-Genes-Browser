@@ -6,11 +6,10 @@ from django.views.decorators.cache import cache_page
 from rest_framework import viewsets
 from rest_framework.response import Response
 
-from .serializers import GenomeSerializer
+from .serializers import GenomeSerializer, TaxonSerializer
 
 
-class GenomeViewSet(viewsets.ViewSet):
-
+class GenomeViewSet(viewsets.ReadOnlyModelViewSet):
 
     @method_decorator(cache_page(60*60*2))
     def list(self, request):
@@ -19,7 +18,7 @@ class GenomeViewSet(viewsets.ViewSet):
         return Response(serializer.data)
 
     def get_queryset(self):
-        query = self.request.GET.get('query', None)
+        query = self.request.GET.get('q', None)
         if query:
             searched_taxon = get_list_or_404(Taxon, name__iexact=query)[0]
             taxonomic_unit = searched_taxon.taxonomic_unit
@@ -47,3 +46,19 @@ class GenomeViewSet(viewsets.ViewSet):
         else:
             genomes = Genome.objects.all()
         return genomes
+
+
+class TaxonNameViewSet(viewsets.ReadOnlyModelViewSet):
+    serializer_class = TaxonSerializer
+
+    def list(self, request):
+        return Response(self.get_queryset().values_list("name", flat=True))
+
+    def get_queryset(self):
+        query = self.request.GET.get('q', None)
+        if query:
+            taxons_containing_query = Taxon.objects.filter(
+                name__icontains=query)
+        else:
+            taxons_containing_query = Taxon.objects.all()
+        return taxons_containing_query
