@@ -57,8 +57,8 @@ class TaxonNameViewSet(viewsets.ReadOnlyModelViewSet):
     def get_queryset(self):
         query = self.request.GET.get('q', None)
         if query:
-            taxons_containing_query = Taxon.objects.filter(
+            taxons = Taxon.objects.filter(
                 name__icontains=query)
         else:
-            taxons_containing_query = Taxon.objects.all()
-        return taxons_containing_query
+            taxons = Taxon.objects.all()
+        return taxons
