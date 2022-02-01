@@ -58,12 +58,12 @@ Top 10 **percentages** species-specific
 
  # Genus-specific
 
-* How many species specific genes are there on average: 57.92676983865657
-* Average percentage of genes that are species-specific: 1.7857878557758267 %
-* Min number of species specific genes: 0 
-* Max number of species specific genes: 2211 
-* Min percentage of species specific genes: 0 %
-* Max percentage of species specific genes: 63.8235294117647 %
+* How many genus specific genes are there on average: 57.92676983865657
+* Average percentage of genes that are genus-specific: 1.7857878557758267 %
+* Min number of genus specific genes: 0 
+* Max number of genus specific genes: 2211 
+* Min percentage of genus specific genes: 0 %
+* Max percentage of genus specific genes: 63.8235294117647 %
 * Standard deviation: 81.91432620050345
 * Median number of genus specific genes: 33
 
