@@ -17,7 +17,8 @@ Number of genomes with no specific genes:
 * Max percentage of species specific genes: 63.8235294117647 %
 * Standard deviation: 105.21635912768656
 * Median number of species specific genes: 63
-  
+* Total number species-specific genes: 4150013
+
 ### Quantiles
 
 * Q1 species :  34.0
@@ -66,6 +67,8 @@ Top 10 **percentages** species-specific
 * Max percentage of genus specific genes: 63.8235294117647 %
 * Standard deviation: 81.91432620050345
 * Median number of genus specific genes: 33
+* Total number genus-specific genes: 2638854
+* 2123799 when clustered
 
 ### Quantiles
 
