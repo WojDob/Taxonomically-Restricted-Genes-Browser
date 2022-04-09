@@ -1,9 +1,11 @@
 from rest_framework.routers import DefaultRouter
 
-from .views import GenomeViewSet, TaxonNameViewSet
+from .views import GenomeViewSet, TaxonViewSet, TaxonomicallyRestrictedGeneViewset
 
 router = DefaultRouter()
 
 router.register(r"genomes", GenomeViewSet, basename="genomes")
-router.register(r"taxon-names", TaxonNameViewSet, basename="taxon-names")
+router.register(r"taxons", TaxonViewSet, basename="taxons")
+router.register(r"trgs", TaxonomicallyRestrictedGeneViewset, basename="trgs")
+
 urlpatterns = router.urls

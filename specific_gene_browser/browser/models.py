@@ -56,7 +56,9 @@ class Genome(models.Model):
 
 class TaxonomicallyRestrictedGene(models.Model):
     accession = models.CharField(max_length=50)
-    origin_genome = models.ForeignKey("Genome", on_delete=models.CASCADE)
+    origin_genome = models.ForeignKey(
+        "Genome", on_delete=models.CASCADE, related_name="originating_trgs"
+    )
     specific_to = models.ForeignKey(
         "Taxon", on_delete=models.CASCADE, related_name="taxonomically_restricted_genes"
     )
@@ -67,3 +69,7 @@ class TaxonomicallyRestrictedGene(models.Model):
 
     def __str__(self):
         return self.accession
+
+    @property
+    def type(self):
+        return f"{self.specific_to.get_taxonomic_unit_display()} specific"
