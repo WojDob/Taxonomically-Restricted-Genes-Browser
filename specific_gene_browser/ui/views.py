@@ -53,6 +53,7 @@ class GeneSearchView(ListView):
                         'family': g.lineage.family.name,
                         'genus': g.lineage.genus.name,
                         'protein_count': g.protein_count,
+                        'trg_count': g.originating_trgs.count(),
                     })
                 context["object_list"] = object_list
             except Taxon.DoesNotExist:

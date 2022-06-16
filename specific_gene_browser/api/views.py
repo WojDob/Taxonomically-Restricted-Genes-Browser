@@ -3,9 +3,11 @@ from browser.models import Genome, Taxon, TaxonomicallyRestrictedGene
 from django.shortcuts import get_list_or_404, get_object_or_404
 from django.utils.decorators import method_decorator
 from django.views.decorators.cache import cache_page
+from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import viewsets
 from rest_framework.response import Response
-
+from rest_framework.decorators import action
+# from .filters import TaxonomicallyRestrictedGeneFilter
 from .serializers import (
     GenomeListSerializer,
     GenomeDetailSerializer,
@@ -62,7 +64,7 @@ class GenomeViewSet(viewsets.ReadOnlyModelViewSet):
                     lineage__species=searched_taxon
                 ).select_related("lineage__family", "lineage__genus")
         else:
-            genomes = []
+            genomes = Genome.objects.none()
         return genomes
 
 
@@ -84,11 +86,14 @@ class TaxonViewSet(viewsets.ReadOnlyModelViewSet):
                 "taxonomically_restricted_genes"
             )
         else:
-            taxons = []
+            taxons = Taxon.objects.none()
         return taxons
 
 
 class TaxonomicallyRestrictedGeneViewset(viewsets.ReadOnlyModelViewSet):
+    # filter_backends = [DjangoFilterBackend]
+    # filterset_class = TaxonomicallyRestrictedGeneFilter
+
     def list(self, request):
         queryset = self.get_queryset()
         serializer = TaxonomicallyRestrictedGeneListSerializer(queryset, many=True)
@@ -106,5 +111,5 @@ class TaxonomicallyRestrictedGeneViewset(viewsets.ReadOnlyModelViewSet):
                 accession__icontains=query
             ).prefetch_related("specific_to")
         else:
-            trgs = []
+            trgs = TaxonomicallyRestrictedGene.objects.all()
         return trgs
