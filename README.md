@@ -9,9 +9,9 @@ The project analyzed sequences from 45,555 bacterial genomes and identified 6,78
 ## Repository Contents
 This repository contains all the code used for the analysis and the construction of the REST API. The main components are:
 
-- **Data Analysis Notebooks:** These Jupyter Notebooks were used to identify and analyze the TRGs from the bacterial genomes.
+- **Data Analysis Notebooks:** These Jupyter Notebooks were used to identify and analyze the TRGs from the bacterial genomes. They are available in the `analysis` directory.
 
-- **Django REST API:** The API allows users to browse the calculated parameters for each of the identified taxonomically specific genes.
+- **Django REST API:** The API allows users to browse the calculated parameters for each of the identified taxonomically specific genes. You can find it in the `specific_gene_browser` directory.
 
 ### Using the REST API
 The REST API allows users to quickly retrieve detailed data obtained from the analysis of TRGs. Users can submit a query containing the name or part of the name of the bacterial taxon of interest to get information about its taxonomic unit and the number of TRGs found within it.
